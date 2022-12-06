@@ -5,11 +5,11 @@ class Solution {
         String answer = "";
         
         String[] strArr = s.split(" ");
+        int[] intArr = new int[strArr.length];
         
-        int[] intArr = Arrays
-                        .stream(strArr)
-                        .mapToInt(Integer::parseInt)
-                        .toArray();
+        for (int i = 0; i < strArr.length; i++) {
+            intArr[i] = Integer.parseInt(strArr[i]);
+        }
         
         Arrays.sort(intArr);
         
