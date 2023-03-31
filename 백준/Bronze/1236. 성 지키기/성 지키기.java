@@ -29,20 +29,20 @@ public class Main {
 			int count = 0;
 
 			for (int j = 0; j < N; j++) {
-				if (castle[j][i] == false) count++;
+				if (castle[j][i]) count++;
 			}
 
-			if (count == N) col_sum++; // 열에 필요한 경비원 수
+			if (count == 0) col_sum++; // 열에 필요한 경비원 수
 		}
 
 		for (int i = 0; i < N; i++) {
 			int count = 0;
 
 			for (int j = 0; j < M; j++) {
-				if (castle[i][j] == false) count++;
+				if (castle[i][j]) count++;
 			}
 
-			if (count == M) row_sum++; // 행에 필요한 경비원 수
+			if (count == 0) row_sum++; // 행에 필요한 경비원 수
 		}
 
 		System.out.println(row_sum >= col_sum ? row_sum : col_sum);
