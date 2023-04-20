@@ -7,11 +7,12 @@ class Solution {
         Arrays.sort(d);
         
         for (int i = 0; i < d.length; i++) {
+            if (budget - d[i] < 0) {
+                break;
+            }
+            
             budget -= d[i];
-            
-            if (budget < 0) break;
-            
-            answer++;
+            answer++;            
         }
         
         return answer;
